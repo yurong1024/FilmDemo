@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.os.Build;
+import android.util.Log;
 import android.util.Pair;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,13 +37,14 @@ public class VideoImpl implements IVideo, EventInterceptor {
 
     @Override
     public void onShowCustomView(View view, WebChromeClient.CustomViewCallback callback) {
+        Log.e("deade","影片播放");
 
 
         Activity mActivity;
         if ((mActivity = this.mActivity) == null || mActivity.isFinishing()) {
             return;
         }
-        mActivity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+//        mActivity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
 
         Window mWindow = mActivity.getWindow();
@@ -84,6 +86,7 @@ public class VideoImpl implements IVideo, EventInterceptor {
 
     @Override
     public void onHideCustomView() {
+        Log.e("deade","FilmPlayActivity隐藏");
 
         if (mMoiveView == null) {
             return;

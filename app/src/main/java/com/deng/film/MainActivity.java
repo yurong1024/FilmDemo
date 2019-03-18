@@ -36,6 +36,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, FullPlayActivity.class));
             }
         });
+        findViewById(R.id.btn_film).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, FilmPlayActivity.class));
+            }
+        });
 
         x5WebView = findViewById(R.id.xwebView);
 

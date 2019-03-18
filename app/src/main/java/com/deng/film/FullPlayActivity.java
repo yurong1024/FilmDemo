@@ -3,6 +3,7 @@ package com.deng.film;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,11 +43,13 @@ public class FullPlayActivity extends AppCompatActivity {
 
             @Override
             public void onShowCustomView(View view, WebChromeClient.CustomViewCallback callback) {
+                Log.e("deade","全屏播放");
                 showCustomView(view, callback);
             }
 
             @Override
             public void onHideCustomView() {
+                Log.e("deade","FullPlayActivity隐藏");
                 hideCustomView();
             }
         });
